@@ -1,5 +1,5 @@
 const par = document.querySelector('p');
-const endpoint = `https://raw.githubusercontent.com/Designoper/json/refs/heads/main/test.json`;
+const endpoint = ``;
 
 // const mainFunction = async (url) => {
 // 	const DATA = await fetchAndParse(url);
@@ -9,11 +9,11 @@ const endpoint = `https://raw.githubusercontent.com/Designoper/json/refs/heads/m
 const fetchAndParse = async (url) => {
 	try {
 		const RESPONSE = await fetch(url);
-		par.insertAdjacentHTML("beforebegin",RESPONSE);
+		par.insertAdjacentHTML("afterbegin",RESPONSE);
 		// console.log(RESPONSE);
 		const DATA = await RESPONSE.json();
 		console.log(DATA);
-		par.insertAdjacentHTML("beforeafter",DATA);
+		par.insertAdjacentHTML("afterbegin",DATA.test);
 	}
 
 	catch {
